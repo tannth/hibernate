@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<!-- <persistence-unit name="manager" transaction-type="JTA"> -->
+	<!--when running in a Java SE environment, you cannot rely on JTA and the 
+		transaction type must be RESOURCE_LOCAL -->
+	<persistence-unit name="manager">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:/MantechHelpdeskDS</jta-data-source>
+
+		<jar-file>entites.jar</jar-file>
+		<class>entites.Account</class>
+		<class>entites.Accountrole</class>
+		<class>entites.Employee</class>
+		<class>entites.Article</class>
+		<class>entites.Articlerate</class>
+		<class>entites.Complaint</class>
+		<class>entites.Complaintcategory</class>
+		<class>entites.Complaintreply</class>
+		<class>entites.Department</class>
+		<class>entites.Job</class>
+		<class>entites.Paramater</class>
+		<class>entites.Role</class>
+
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect" />
+		</properties>
+	</persistence-unit>
+</persistence>

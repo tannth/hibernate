@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<mapping class="mod_entites.Account" />
+		<mapping class="mod_entites.Accountrole" />
+		<mapping class="mod_entites.Article" />
+		<mapping class="mod_entites.Articlerate" />
+		<mapping class="mod_entites.Complaint" />
+		<mapping class="mod_entites.Complaintcategory" />
+		<mapping class="mod_entites.Complaintcategory" />
+		<mapping class="mod_entites.Complaintreply" />
+		<mapping class="mod_entites.Department" />
+		<mapping class="mod_entites.Employee" />
+		<mapping class="mod_entites.Job" />
+		<mapping class="mod_entites.Paramater" />
+		<mapping class="mod_entites.Role" />
+	</session-factory>
+</hibernate-configuration>
