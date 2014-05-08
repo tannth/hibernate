@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.java.Question" table="q504">
+		<id name="qid">
+			<generator class="increment"></generator>
+		</id>
+		<property name="qname"></property>
+		<set name="answers" cascade="all">
+			<key column="qid"></key>
+			<one-to-many class="com.java.Answer" />
+		</set>
+	</class>
+	<class name="com.java.Answer" table="ans504">
+		<id name="aid">
+			<generator class="increment"></generator>
+		</id>
+		<property name="answer"></property>
+		<property name="postBy"></property>
+	</class>
+</hibernate-mapping>
